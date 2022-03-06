@@ -24,7 +24,7 @@ var symbol=window.prompt ('Y or N for symbol in password, for example !@#');
 var length=window.prompt ('enter ideal length of password between 8 to 125 characters');
 
 
-console.log(number,upperCase,lowerCase,symbol, length);
+console.log(number,upperCase,lowerCase,symbol,length);
 //If user pressed Cancel, immediately end function//
 
 
@@ -73,24 +73,20 @@ return keys.symbol[Math.floor(Math.random() * keys.symbol.length)];
 
 
 //part3: function password and check length//
-// function createPassword() {
-// var passwordBox=document.getElementById("password");
-// let password="";
-// while (length.value > password.length) {
-//  let keyToAdd = getKey [Math.floor(Math.random()*getKeySymbol.length)];
-//  let isChecked=document.getElementById (keyToAdd.name).checked;
-//  if (isChecked) {
-//    password +=keyToAdd();
-//  }
+function generatePassword() {
+var passwordBox=document.getElementById("password");
+let password="";
+while (length.value > password.length) {
+ let keyToAdd = getKey [Math.floor(Math.random()*getKeySymbol.length)];
+ let isChecked=document.getElementById (keyToAdd.name).checked;
+ if (isChecked) {
+   password +=keyToAdd();
+ }
+}
 
-// passwordBox.innerHTML = password;
-// }
-//function createPassword() {
-// var upper = document.getElementById("upperCase").checked;
-// var lower = document.getElementById("lowerCase").checked;
-// var number = document.getElementById("number").checked;
-// var symbol = document.getElementById("symbol").checked;
-//}
+passwordBox.innerHTML = password;
+}
+
 
 
 
